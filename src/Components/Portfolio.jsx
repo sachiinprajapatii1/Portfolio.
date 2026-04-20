@@ -21,7 +21,7 @@ const Portfolio = () => {
       title: "Portfolio Website",
       desc: "This very portfolio — built with React and Tailwind CSS. Features smooth scrolling, responsive design, animations, and a working contact form.",
       tech: ["React", "Tailwind CSS", "JavaScript"],
-      link: "#home",
+      link: "https://portfolio-sachin-tys.vercel.app/",
       github: "https://github.com/sachiinprajapatii1",
       category: "React",
       image: "/image4.png",
