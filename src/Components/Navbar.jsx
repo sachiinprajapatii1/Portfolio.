@@ -32,7 +32,7 @@ function Navbar() {
     <div className={`max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/90 backdrop-blur-sm'}`}>
       <div className='flex justify-between h-16 items-center'>
         <div className='flex space-x-2 items-center'>
-          <img className='h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white font-bold text-lg' src="public\SachinDP.jpg" alt="S" />
+          <img className='h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white font-bold text-lg' src="\SachinDP.jpg" alt="S" />
           <div>
             <h1 className='font-bold text-xl cursor-pointer leading-tight'>Sach<span className='text-blue-600'>in</span></h1>
             <p className='text-xs text-gray-500 leading-none'>Web Developer</p>

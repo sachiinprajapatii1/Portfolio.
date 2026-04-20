@@ -101,7 +101,7 @@ function Home() {
         <div className="relative mt-16 md:mt-0">
           <div className="absolute -inset-6 bg-gradient-to-br from-blue-200 to-indigo-200 rounded-full blur-2xl opacity-60 animate-pulse"></div>
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-white shadow-2xl bg-gradient-to-br from-blue-400 to-blue-700 flex items-center justify-center overflow-hidden">
-            <span className="text-white text-8xl font-bold select-none"><img src="public\SachinDP.jpg" alt="" /></span>
+            <span className="text-white text-8xl font-bold select-none"><img src="\SachinDP.jpg" alt="" /></span>
           </div>
           {/* Floating badge */}
           <div className="absolute -bottom-2 -right-2 bg-white rounded-2xl px-4 py-2 shadow-lg border border-gray-100">
