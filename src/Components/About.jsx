@@ -7,7 +7,7 @@ const About = () => {
       icon: <FaGraduationCap size={22} className="text-blue-600" />,
       title: "Education",
       desc: "Bachelor of Computer Application (BCA)",
-      sub: "Currently pursuing degree in computer science fundamentals"
+      sub: "Completed Bachelor’s degree in Computer Software Engineering"
     },
     {
       icon: <FaCode size={22} className="text-blue-600" />,
