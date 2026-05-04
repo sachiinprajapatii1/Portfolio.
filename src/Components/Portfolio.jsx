@@ -6,10 +6,10 @@ const Portfolio = () => {
 
   const projects = [
     {
-      id: 1,
+      id: 2,
       title: "Universal Media Downloader",
       desc: "A full-stack MERN media downloader web app that lets users download videos, audio, and images from multiple platforms. Features a clean React UI for pasting URLs, choosing format/quality, real-time download status, a Node.js + Express backend for processing requests, MongoDB for history/logs, and live deployment with Vercel + Render.",
-      tech: ["React", "MongoDB", "NodeJs", "ExpressJs","Tailwind CSS", "Vercel", "Render"],
+      tech: ["React", "MongoDB", "NodeJs", "ExpressJs","Tailwind CSS","Postman", "Vercel", "Render"],
       link: "https://universal-media-downloader-tys.vercel.app/",
       github: "https://github.com/sachiinprajapatii1",
       category: "React",
@@ -17,7 +17,18 @@ const Portfolio = () => {
       color: "from-orange-400 to-rose-500",
     },
     {
-      id: 2,
+      id: 1,
+      title: "BizManager Android App",
+      desc: "Built a full-stack Android app for small business owners to manage customers, payments, and records Packaged web app into a native Android APK using Capacitor with production-grade signed release build",
+      tech: ["React", "MongoDB", "NodeJs", "ExpressJs","Tailwind CSS", "Render", "Capacitor", "Android Studio", "Postman"],
+      link: "https://drive.google.com/file/d/17hgSe6TulYqoW5pxS1IqqLBUCLgby76T/view?usp=sharing",
+      github: "https://github.com/sachiinprajapatii1",
+      category: "React, AndroidApp ",
+      image: "/image6.png",
+      color: "from-orange-400 to-rose-500",
+    },
+    {
+      id: 3,
       title: "Portfolio Website",
       desc: "This very portfolio — built with React and Tailwind CSS. Features smooth scrolling, responsive design, animations, and a working contact form.",
       tech: ["React", "Tailwind CSS", "JavaScript"],
@@ -29,7 +40,7 @@ const Portfolio = () => {
     },
     
     {
-      id: 3,
+      id: 4,
       title: "Dashboard UI Project",
       desc: "A responsive dashboard layout with multiple sections and navigation. Structured UI components focused on clean design and responsive behavior.",
       tech: ["HTML", "CSS", "JavaScript"],
@@ -40,7 +51,7 @@ const Portfolio = () => {
       color: "from-blue-400 to-blue-600",
     },
     {
-      id: 4,
+      id: 5,
       title: "Image Editor Web App",
       desc: "An image editing tool with real-time preview and basic manipulation. Handles user input dynamically and provides an intuitive UI.",
       tech: ["HTML", "CSS", "JavaScript"],
@@ -51,7 +62,7 @@ const Portfolio = () => {
       color: "from-purple-400 to-violet-500",
     },
     {
-      id: 5,
+      id: 6,
       title: "Drag and Drop Todo App",
       desc: "A task management app with drag-and-drop functionality. Dynamic task movement using JavaScript events with real-time updates without page reload.",
       tech: ["HTML", "CSS", "JavaScript"],
