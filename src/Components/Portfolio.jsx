@@ -6,17 +6,6 @@ const Portfolio = () => {
 
   const projects = [
     {
-      id: 2,
-      title: "Universal Media Downloader",
-      desc: "A full-stack MERN media downloader web app that lets users download videos, audio, and images from multiple platforms. Features a clean React UI for pasting URLs, choosing format/quality, real-time download status, a Node.js + Express backend for processing requests, MongoDB for history/logs, and live deployment with Vercel + Render.",
-      tech: ["React", "MongoDB", "NodeJs", "ExpressJs","Tailwind CSS","Postman", "Vercel", "Render"],
-      link: "https://universal-media-downloader-tys.vercel.app/",
-      github: "https://github.com/sachiinprajapatii1",
-      category: "React",
-      image: "/image5.png",
-      color: "from-orange-400 to-rose-500",
-    },
-    {
       id: 1,
       title: "BizManager Android App",
       desc: "Built a full-stack Android app for small business owners to manage customers, payments, and records Packaged web app into a native Android APK using Capacitor with production-grade signed release build",
@@ -25,6 +14,17 @@ const Portfolio = () => {
       github: "https://github.com/sachiinprajapatii1",
       category: "React, AndroidApp ",
       image: "/image6.jpg",
+      color: "from-orange-400 to-rose-500",
+    },
+    {
+      id: 2,
+      title: "Universal Media Downloader",
+      desc: "A full-stack MERN media downloader web app that lets users download videos, audio, and images from multiple platforms. Features a clean React UI for pasting URLs, choosing format/quality, real-time download status, a Node.js + Express backend for processing requests, MongoDB for history/logs, and live deployment with Vercel + Render.",
+      tech: ["React", "MongoDB", "NodeJs", "ExpressJs","Tailwind CSS","Postman", "Vercel", "Render"],
+      link: "https://universal-media-downloader-tys.vercel.app/",
+      github: "https://github.com/sachiinprajapatii1",
+      category: "React",
+      image: "/image5.png",
       color: "from-orange-400 to-rose-500",
     },
     {
