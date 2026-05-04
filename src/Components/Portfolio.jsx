@@ -24,7 +24,7 @@ const Portfolio = () => {
       link: "https://drive.google.com/file/d/17hgSe6TulYqoW5pxS1IqqLBUCLgby76T/view?usp=sharing",
       github: "https://github.com/sachiinprajapatii1",
       category: "React, AndroidApp ",
-      image: "/image6.png",
+      image: "/image6.jpg",
       color: "from-orange-400 to-rose-500",
     },
     {
