@@ -69,7 +69,7 @@ const Projects = () => {
       link: "https://sachiinprajapatii1.github.io/DashBoard/",
       github: "https://github.com/sachiinprajapatii1",
       category: "JavaScript",
-      image: "/image3.png",
+      image: "/image8.png",
       color: "from-blue-400 to-blue-600",
     },
     {
