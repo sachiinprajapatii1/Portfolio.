@@ -11,7 +11,7 @@ function Navbar() {
     { id: 1, text: "Home", href: "#home" },
     { id: 2, text: "About", href: "#about" },
     { id: 3, text: "Skills", href: "#skills" },
-    { id: 4, text: "Portfolio", href: "#portfolio" },
+    { id: 4, text: "Projects", href: "#projects" },
     { id: 5, text: "Experience", href: "#experience" },
     { id: 6, text: "Contact", href: "#contact" },
   ]

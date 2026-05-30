@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-const Portfolio = () => {
+const Projects = () => {
   const [filter, setFilter] = useState("All");
 
   const projects = [
@@ -30,7 +30,7 @@ const Portfolio = () => {
     {
       id: 3,
       title: "Portfolio Website",
-      desc: "This very portfolio — built with React and Tailwind CSS. Features smooth scrolling, responsive design, animations, and a working contact form.",
+      desc: "Full-stack developer social platform built with MERN Stack, featuring JWT authentication, real-time chat, notifications, posts, likes, comments, and responsive UI.",
       tech: ["React", "Tailwind CSS", "JavaScript"],
       link: "https://portfolio-sachin-tys.vercel.app/",
       github: "https://github.com/sachiinprajapatii1",
@@ -38,9 +38,31 @@ const Portfolio = () => {
       image: "/image4.png",
       color: "from-orange-400 to-rose-500",
     },
-    
+    {
+      id: 8,
+      title: "DevHub Connect",
+      desc: "Developed a full-stack social networking platform for developers. Implemented user authentication and authorization using JWT. Built real-time chat and notifications with Socket.IO. Created post creation, feed, likes, comments, and profile management features. Integrated responsive UI using Tailwind CSS and REST APIs. Managed backend APIs, database operations, and state management.",
+      tech: ["React.js", "Node.js", "Express.js","MongoDB","Socket.IO","Tailwind CSS","","JWT Authentication"],
+      link: "https://portfolio-sachin-tys.vercel.app/",
+      github: "https://github.com/sachiinprajapatii1",
+      category: "React",
+      image: "/image4.png",
+      color: "from-orange-400 to-rose-500",
+    },
     {
       id: 4,
+      title: "Word To Pdf Converter",
+      desc: "Word File To Pdf Converter",
+      tech: ["ReactJs", "TailwindCss", "CloudConvert",],
+      link: "https://sachiinprajapatii1.github.io/Drag-and-Drop-TODO/",
+      github: "https://github.com/sachiinprajapatii1",
+      category: "ReactJs",
+      image: "/image7.png",
+      color: "from-green-400 to-emerald-500",
+    },
+    
+    {
+      id: 5,
       title: "Dashboard UI Project",
       desc: "A responsive dashboard layout with multiple sections and navigation. Structured UI components focused on clean design and responsive behavior.",
       tech: ["HTML", "CSS", "JavaScript"],
@@ -51,7 +73,7 @@ const Portfolio = () => {
       color: "from-blue-400 to-blue-600",
     },
     {
-      id: 5,
+      id: 6,
       title: "Image Editor Web App",
       desc: "An image editing tool with real-time preview and basic manipulation. Handles user input dynamically and provides an intuitive UI.",
       tech: ["HTML", "CSS", "JavaScript"],
@@ -62,7 +84,7 @@ const Portfolio = () => {
       color: "from-purple-400 to-violet-500",
     },
     {
-      id: 6,
+      id: 7,
       title: "Drag and Drop Todo App",
       desc: "A task management app with drag-and-drop functionality. Dynamic task movement using JavaScript events with real-time updates without page reload.",
       tech: ["HTML", "CSS", "JavaScript"],
@@ -72,6 +94,7 @@ const Portfolio = () => {
       image: "/image.png",
       color: "from-green-400 to-emerald-500",
     },
+    
     
     
   ];
@@ -196,4 +219,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Projects;
