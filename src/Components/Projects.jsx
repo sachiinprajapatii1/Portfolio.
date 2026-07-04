@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const Projects = () => {
   const [filter, setFilter] = useState("All");
+  const [showAll, setShowAll] = useState(false);
 
   const projects = [
     {
@@ -12,7 +13,7 @@ const Projects = () => {
       tech: ["React", "MongoDB", "NodeJs", "ExpressJs","Tailwind CSS", "Render", "Capacitor", "Android Studio", "Postman"],
       link: "https://drive.google.com/file/d/17hgSe6TulYqoW5pxS1IqqLBUCLgby76T/view?usp=sharing",
       github: "https://github.com/sachiinprajapatii1",
-      category: "React, AndroidApp ",
+      category: "React",
       image: "/image6.jpg",
       color: "from-orange-400 to-rose-500",
     },
@@ -28,7 +29,18 @@ const Projects = () => {
       color: "from-orange-400 to-rose-500",
     },
     {
-      id: 3,
+      id: 23,
+      title: "LearnHub - Online Learning Platform",
+      desc: "A full-stack MERN online learning platform that allows users to browse and enroll in courses, track progress, and interact with instructors. Features include user authentication, course management, video streaming, quizzes, and a responsive UI built with React and Tailwind CSS.",
+      tech: ["React", "MongoDB", "NodeJs", "ExpressJs","Nodemailer","Redux","Cloudinary","Tailwind CSS","Postman", "Vercel", "Render"],
+      link: "https://e-learning-tys.vercel.app",
+      github: "https://github.com/sachiinprajapatii1",
+      category: "React",
+      image: "/image9.png",
+      color: "from-orange-400 to-rose-500",
+    },
+    {
+      id: 4,
       title: "Portfolio Website",
       desc: "Full-stack developer social platform built with MERN Stack, featuring JWT authentication, real-time chat, notifications, posts, likes, comments, and responsive UI.",
       tech: ["React", "Tailwind CSS", "JavaScript"],
@@ -39,30 +51,18 @@ const Projects = () => {
       color: "from-orange-400 to-rose-500",
     },
     {
-      id: 8,
-      title: "DevHub Connect",
-      desc: "Developed a full-stack social networking platform for developers. Implemented user authentication and authorization using JWT. Built real-time chat and notifications with Socket.IO. Created post creation, feed, likes, comments, and profile management features. Integrated responsive UI using Tailwind CSS and REST APIs. Managed backend APIs, database operations, and state management.",
-      tech: ["React.js", "Node.js", "Express.js","MongoDB","Socket.IO","Tailwind CSS","JWT Authentication"],
-      link: "https://dev-hub-frontend-tys.vercel.app/",
-      github: "https://github.com/sachiinprajapatii1",
-      category: "React",
-      image: "/image8.png",
-      color: "from-orange-400 to-rose-500",
-    },
-    {
-      id: 4,
+      id: 5,
       title: "Word To Pdf Converter",
       desc: "Word File To Pdf Converter",
-      tech: ["ReactJs", "TailwindCss", "CloudConvert",],
+      tech: ["ReactJs", "TailwindCss", "CloudConvert"],
       link: "https://word-to-pdf-tys.vercel.app/",
       github: "https://github.com/sachiinprajapatii1",
-      category: "ReactJs",
+      category: "React",
       image: "/image7.png",
       color: "from-green-400 to-emerald-500",
     },
-    
     {
-      id: 5,
+      id: 6,
       title: "Dashboard UI Project",
       desc: "A responsive dashboard layout with multiple sections and navigation. Structured UI components focused on clean design and responsive behavior.",
       tech: ["HTML", "CSS", "JavaScript"],
@@ -73,7 +73,7 @@ const Projects = () => {
       color: "from-blue-400 to-blue-600",
     },
     {
-      id: 6,
+      id: 7,
       title: "Image Editor Web App",
       desc: "An image editing tool with real-time preview and basic manipulation. Handles user input dynamically and provides an intuitive UI.",
       tech: ["HTML", "CSS", "JavaScript"],
@@ -84,7 +84,7 @@ const Projects = () => {
       color: "from-purple-400 to-violet-500",
     },
     {
-      id: 7,
+      id: 8,
       title: "Drag and Drop Todo App",
       desc: "A task management app with drag-and-drop functionality. Dynamic task movement using JavaScript events with real-time updates without page reload.",
       tech: ["HTML", "CSS", "JavaScript"],
@@ -94,17 +94,34 @@ const Projects = () => {
       image: "/image.png",
       color: "from-green-400 to-emerald-500",
     },
-    
-    
-    
+    {
+      id: 9,
+      title: "DevHub Connect",
+      desc: "Developed a full-stack social networking platform for developers. Implemented user authentication and authorization using JWT. Built real-time chat and notifications with Socket.IO. Created post creation, feed, likes, comments, and profile management features. Integrated responsive UI using Tailwind CSS and REST APIs. Managed backend APIs, database operations, and state management.",
+      tech: ["React.js", "Node.js", "Express.js","MongoDB","Socket.IO","Tailwind CSS","JWT Authentication"],
+      link: "https://dev-hub-frontend-tys.vercel.app/",
+      github: "https://github.com/sachiinprajapatii1",
+      category: "React",
+      image: "/image8.png",
+      color: "from-orange-400 to-rose-500",
+    },
   ];
 
   const categories = ["All", "JavaScript", "React"];
 
-  const filtered =
-    filter === "All"
-      ? projects
-      : projects.filter((p) => p.category === filter);
+  // Reset showAll toggle when changing filters to prevent awkward states
+  const handleFilterChange = (cat) => {
+    setFilter(cat);
+    setShowAll(false);
+  };
+
+  // Safe category filtering handling strings/arrays accurately
+  const filteredProjects = filter === "All"
+    ? projects
+    : projects.filter((p) => p.category.includes(filter));
+
+  // Determine projects to actually display
+  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 4);
 
   return (
     <section id="projects" className="py-20 px-8 bg-white">
@@ -125,7 +142,7 @@ const Projects = () => {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setFilter(cat)}
+              onClick={() => handleFilterChange(cat)}
               className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                 filter === cat
                   ? "bg-blue-600 text-white shadow-md"
@@ -139,7 +156,7 @@ const Projects = () => {
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {filtered.map((project) => (
+          {displayedProjects.map((project) => (
             <div
               key={project.id}
               className="group border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white"
@@ -149,7 +166,7 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-top group-hover:scale-105 transition duration-300"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300"
                 />
               </div>
 
@@ -159,7 +176,7 @@ const Projects = () => {
                   {project.title}
                 </h3>
 
-                <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3 hover:line-clamp-none transition-all duration-300">
                   {project.desc}
                 </p>
 
@@ -176,7 +193,7 @@ const Projects = () => {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex gap-3 flex-wrap">
+                <div className="flex gap-3 flex-wrap mt-auto">
                   <a
                     href={project.link}
                     target="_blank"
@@ -202,8 +219,27 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* GitHub Button */}
-        <div className="text-center mt-10">
+        {/* Dynamic Action Buttons Group */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+          {/* View More / Less Projects Button */}
+          {filteredProjects.length > 4 && (
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="flex items-center gap-2 px-6 py-3 bg-gray-800 text-white font-semibold rounded-xl hover:bg-gray-900 transition shadow-sm"
+            >
+              {showAll ? (
+                <>
+                  View Less Projects <FaChevronUp size={14} />
+                </>
+              ) : (
+                <>
+                  View All Projects ({filteredProjects.length}) <FaChevronDown size={14} />
+                </>
+              )}
+            </button>
+          )}
+
+          {/* View All on GitHub Button */}
           <a
             href="https://github.com/sachiinprajapatii1"
             target="_blank"
