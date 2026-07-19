@@ -43,7 +43,7 @@ function Home() {
           I'm a{' '}
           <ReactTyped
             className='text-blue-600'
-            strings={["Developer", "MERN Stack Dev", "React Specialist", "Problem Solver"]}
+            strings={["Developer", "Full Stack Dev", "React Specialist", "Problem Solver"]}
             typeSpeed={50}
             backSpeed={40}
             loop={true}
